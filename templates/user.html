@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block body %}
+</br>
+<div class="container">
+    <div class="alert alert-success" role="alert">
+        <h6 class="text-lg-right">نام کاربری: {{ userName }} </h6>
+    </div>
+    <form action="/add" method="POST">
+        <div class="form-group">
+            <h5 class="text-lg-right">لطفا کد را جهت ارسال وارد کنید.</h5>
+            </br>
+            <input type="text" class="form-control" name="code" placeholder="کد ارسالی">
+            <input type="hidden" name=user value="{{ user }}">
+          </div>
+          <button type="submit" class="btn btn-success">ارسال</button>
+    </form>
+</div>
+
+{% endblock %}

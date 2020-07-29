@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<script src="{{ url_for('static', filename='js/node_modules/clipboard/dist/clipboard.min.js') }}"></script>
+<script src=".{{ url_for('static', filename='js/index.js') }}"></script>
+
+{% endblock%}
+
+{% block body %}
+<div class="container">
+    <br/>
+    <form id="codeForm">
+        <div class="row">
+          <div class="col">
+            <input type="text" id="userName" class="form-control" placeholder="اسم" readonly>
+          </div>
+          <div class="col">
+            <input type="text" id="copyCode" class="form-control" placeholder="کد" readonly>
+          </div>
+        </div>
+        <br/>
+        <button type="button" class="btn btn-success" data-clipboard-target="#copyCode">کپی کد</button>
+        <button type="submit" class="btn btn-danger">حدف کد</button>
+      </form>
+      <br/>
+      <table id="codeTable" class="table table-dark table-hover">
+        <thead>
+          <tr>
+            <th scope="col">ردیف</th>
+            <th scope="col">اسم</th>
+            <th scope="col">کد</th>
+            <th scope="col">دکمه</th>
+          </tr>
+        </thead>
+        <tbody id='tableBody'>
+          
+        </tbody>
+      </table>
+</div>
+
+{% endblock %}

@@ -1,0 +1,18 @@
+{
+  "name": "static-js",
+  "version": "1.0.0",
+  "description": "codeApp Static js files",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Soroush Alinia",
+  "license": "MIT",
+  "dependencies": {
+    "@popperjs/core": "^2.4.4",
+    "bootstrap": "^4.5.0",
+    "clipboard": "^2.0.6",
+    "jqeury": "0.0.1-security",
+    "jquery": "^3.5.1"
+  }
+}
